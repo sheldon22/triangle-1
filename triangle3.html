@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>伪元素实现三角形</title>
+    <style>
+        .outside{
+            width: 200px;
+            height: 100px;
+            border: 2px solid #ccc;
+            margin-top: 20px;
+            position: relative;
+        }
+        .outside::before{
+            height: 0px;
+            width: 0px;
+            border: 16px solid transparent;
+            border-bottom-color: #cccccc; 
+            position: absolute;
+            content: '';
+            top: -32px;
+            left: 10px;
+        }    
+        .outside::after{
+            height: 0px;
+            width: 0px;
+            border: 14px solid transparent;
+            border-bottom-color: #fff; 
+            position: absolute;
+            content: '';
+            top: -28px;
+            left: 12px;
+        }    
+    </style>
+</head>
+<body>
+    <div class="outside"></div>    
+</body>
+</html>

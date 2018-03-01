@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伪元素实现三角形</title>
+    <style>
+        .outside{
+            width: 200px;
+            height: 100px;
+            border: 2px solid #ccc;
+            margin-top: 20px;
+            position: relative;
+        }
+        .outside::before{
+            height: 0px;
+            width: 0px;
+            border-top: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid #666;
+            border-left: 15px solid transparent;
+            position: absolute;
+            top: -30px;
+            left: 20px;
+            content: '';
+        }
+    </style>
+</head>
+<body>
+    <div class="outside"></div>    
+</body>
+</html>
